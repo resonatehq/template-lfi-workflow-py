@@ -11,7 +11,7 @@ brew install resonatehq/tap/resonate
 Then use the project creation command and specify this template:
 
 ```shell
-resonate project create --name <your-project-name> --template two-step-lfi-workflow
+resonate project create --name <your-project-name> --template two-step-lfi-workflow-py
 ```
 
 Check the `pyproject.toml` file to see which package versions this template is pinned to.
