@@ -1,6 +1,7 @@
 from resonate import Resonate
 from resonate.stores import LocalStore
 
+
 # Create a Resonate instance with a local store
 resonate = Resonate(store=LocalStore())
 
