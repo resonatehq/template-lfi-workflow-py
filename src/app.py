@@ -1,8 +1,8 @@
-from resonate import Resonate
 from resonate.stores import LocalStore
+from resonate import Resonate
 
 
-# Create a Resonate instance with a local store
+# Initialize Resonate with a local store (in memory)
 resonate = Resonate(store=LocalStore())
 
 
@@ -11,6 +11,9 @@ resonate = Resonate(store=LocalStore())
 def foo(ctx, greeting):
     print("running foo")
     greeting = yield ctx.lfc(bar, greeting)
+    # to make this call asynchronous
+    # promise = yield ctx.lfi(bar, greeting)
+    # greeting = yield promise
     greeting = yield ctx.lfc(baz, greeting)
     return greeting
 
@@ -25,7 +28,7 @@ def baz(_, v):
     return f"{v}!"
 
 
-# Define a main function to start the Flask app
+# Define a main function
 def main():
     try:
         handle = foo.run("hello-world-greeting", greeting="hello")

@@ -1,5 +1,5 @@
 [project]
-name = "two-step-lfi-workflow-template"
+name = "lfi-workflow-template"
 version = "0.1.0"
 description = "Two step local inocation workflow template"
 authors = [

@@ -78,6 +78,25 @@ wheels = [
 ]
 
 [[package]]
+name = "lfi-workflow-template"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "resonate-sdk" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "mypy" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "resonate-sdk", specifier = "==0.4.12" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "mypy", specifier = "==1.14.0" }]
+
+[[package]]
 name = "mypy"
 version = "1.14.0"
 source = { registry = "https://pypi.org/simple" }
@@ -230,25 +249,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/33/44/36c9616879eff2ab8
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a0/9d/75c687776424c54add732166207099dd508aa4990c3c40b1fb4adbff1bce/resonate_sdk-0.4.12-py3-none-any.whl", hash = "sha256:7828a4700d4eb3fbde8000f2658348f1042ce9004415edcaa621f40919f330d6", size = 42896 },
 ]
-
-[[package]]
-name = "two-step-lfi-workflow-template"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "resonate-sdk" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "mypy" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "resonate-sdk", specifier = "==0.4.12" }]
-
-[package.metadata.requires-dev]
-dev = [{ name = "mypy", specifier = "==1.14.0" }]
 
 [[package]]
 name = "typing-extensions"
