@@ -1,26 +1,15 @@
-# Two step local function invocation workflow template
+# LFI workflow - Resonate Python SDK application template
 
-This repository serves serves as a template to scaffold Resonate projects in Python.
+This repository serves as a template for scaffolding a project with the Resonate CLI.
 
-You can use this template by installing the Resonate CLI:
-
-```shell
-brew install resonatehq/tap/resonate
-```
-
-Then use the project creation command and specify this template:
-
-```shell
-resonate project create --name <your-project-name> --template two-step-lfi-workflow-py
-```
-
-Check the `pyproject.toml` file to see which package versions this template is pinned to.
-
-You can use any python environment and package manager with this template, however we do prefer working with [uv](https://docs.astral.sh/uv/) and recommend it.
-
-To run this project with `uv`:
+Install dependencies:
 
 ```shell
 uv sync
+```
+
+Run as a script:
+
+```shell
 uv run app
 ```
